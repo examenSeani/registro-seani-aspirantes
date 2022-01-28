@@ -26,10 +26,10 @@ const FromRegister = () => {
                 type="radio" 
                 id="e1" 
                 name="gender" 
-                value="e1-2021"
+                value="e1-2022"
                 onChange={handleRadio}
               />
-              <label for="e1">e1-2021</label>
+              <label for="e1">e1-2022</label>
             </div>
             
             <div>
@@ -37,10 +37,10 @@ const FromRegister = () => {
                 type="radio" 
                 id="e2" 
                 name="gender" 
-                value="e2-2021"
+                value="e2-2022"
                 onChange={handleRadio}
               />
-              <label for="e2">e2-2021</label>
+              <label for="e2">e2-2022</label>
             </div>
 
             <div>
@@ -48,10 +48,10 @@ const FromRegister = () => {
                 type="radio" 
                 id="e3" 
                 name="gender" 
-                value="e3-2021"
+                value="e3-2022"
                 onChange={handleRadio}
               />
-              <label for="e3">e3-2021</label>  
+              <label for="e3">e3-2022</label>  
             </div>
           </Etapas>
 
