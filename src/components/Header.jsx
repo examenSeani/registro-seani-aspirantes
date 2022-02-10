@@ -20,7 +20,7 @@ const Header = () => {
                         <h2>Registro de aspirantes</h2>
                 }
                 <ul>
-                    <li><a href="">Preba SEANI</a></li>
+                    <li><a href="">Prueba SEANI</a></li>
                     <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
                     <li><a href="">Administrador</a></li>
                 </ul>
