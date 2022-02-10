@@ -9,7 +9,9 @@ const ContextRegistro = React.createContext();
 
 const ProviderRegistro = ({children}) => {
 
-    const [alumnos, setalumnos] = useState({});
+    const [alumnos, setalumnos] = useState({
+      carrera: 'DNAM'
+    });
     const [test, setTest] = useState([]);
     const [logico, setlogico] = useState([]);
     const [matematico, setmatematico] = useState([]);
@@ -19,12 +21,13 @@ const ProviderRegistro = ({children}) => {
         gender : ""
     });
 
-    const cambiar = (e) => {
-        const { value, name } = e.target;
+    const cambiar = ({target:{value, name}}) => {
+
         setalumnos({
           ...alumnos,
           [name]: value,
         });
+
     };
 
     const handleRadio = (e)=>{
@@ -40,7 +43,8 @@ const ProviderRegistro = ({children}) => {
     let etapaFinal = etapa.gender;
 
     const registrar = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+      etapa.gender != '' ?
       firebase
         .auth()
         .createUserWithEmailAndPassword(alumnos.email, alumnos.password)
@@ -70,7 +74,9 @@ const ProviderRegistro = ({children}) => {
         .catch((err) => {
           alert(err);
           console.log(err);
-        });
+        })
+
+        :alert('Seleccione una etapa');
     };
 
     const sendVerificationEmail = () => {

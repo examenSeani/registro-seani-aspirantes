@@ -79,13 +79,27 @@ const FromRegister = () => {
                 onChange={cambiar}
             />
 
-            <input 
+            {/* <input 
                 type="text" 
                 placeholder="Carrera"
                 name="carrera"
                 value={alumnos.carrera}
                 onChange={cambiar}
-            />
+            /> */}
+            <Select name='carrera' value={alumnos.carrera} onChange={ cambiar } >
+              <option value="DNAM">DNAM</option>
+              <option value="PIAA">PIAA</option>
+              <option value="PIAM">PIAM</option>
+              <option value="MAUU">MAUU</option>
+              <option value="DMIAR">DMIAP</option>
+              <option value="MAI">MAI</option>
+              <option value="PIAP">PIAP</option>
+              <option value="AACH">AACH</option>
+              <option value="TIADSM">TIADSM</option>
+              <option value="TIAIRD">TIAIRD</option>
+              <option value="TIAVND">TIAVND</option>
+              <option value="MAR">MAR</option>
+            </Select>
             <Boton>Registrar</Boton>
         </Registro>
         </>
@@ -147,6 +161,14 @@ const Boton = styled.button`
         background: #ff7b00;
         cursor: pointer;
     }
+`;
+
+const Select = styled.select`
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px teal;
+  padding-bottom: 5px;
 `;
 
 export default FromRegister;
