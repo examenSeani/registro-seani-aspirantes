@@ -45,38 +45,37 @@ const ProviderRegistro = ({children}) => {
     const registrar = (e) => {
       e.preventDefault();
       etapa.gender != '' ?
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(alumnos.email, alumnos.password)
-        .then((res) => {
-          var data = {
-            user: res.user.uid,
-            activeExam1: true,
-            activeLogic: true,
-            activeMat: true,
-            activeLengua: true,
-            time: 10800,
-            timeLogic: 7300,
-            timeMat: 7300,
-            timeLeng: 7300,
-            username: alumnos.username,
-            alumnData: { carrera: alumnos.carrera },
-            test: test,
-            logico: logico,
-            matematico: matematico,
-            lengua: lengua,
-          };
-          addAlumn(res.user.uid, data, etapaFinal)
-            .then((re) => console.log(re))
-            .catch((err) => console.log(err));
-            sendVerificationEmail();
-        })
-        .catch((err) => {
-          alert(err);
-          console.log(err);
-        })
-
-        :alert('Seleccione una etapa');
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(alumnos.email, alumnos.password)
+          .then((res) => {
+            var data = {
+              user: res.user.uid,
+              activeExam1: true,
+              activeLogic: true,
+              activeMat: true,
+              activeLengua: true,
+              time: 10800,
+              timeLogic: 7300,
+              timeMat: 7300,
+              timeLeng: 7300,
+              username: alumnos.username,
+              alumnData: { carrera: alumnos.carrera },
+              test: test,
+              logico: logico,
+              matematico: matematico,
+              lengua: lengua,
+            };
+            addAlumn(res.user.uid, data, etapaFinal)
+              .then((re) => console.log(re))
+              .catch((err) => console.log(err));
+              sendVerificationEmail();
+          })
+          .catch((err) => {
+            alert(err);
+            console.log(err);
+          })
+      :alert('Seleccione una etapa');
     };
 
     const sendVerificationEmail = () => {

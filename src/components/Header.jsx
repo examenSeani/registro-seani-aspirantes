@@ -20,9 +20,9 @@ const Header = () => {
                         <h2>Registro de aspirantes</h2>
                 }
                 <ul>
-                    <li><a href="">Prueba SEANI</a></li>
+                    <li><a href="https://seani-main.vercel.app/" target='_blank' >Prueba SEANI</a></li>
                     <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
-                    <li><a href="">Administrador</a></li>
+                    <li><a href="https://adminpage-nu.vercel.app/login" target='_blank' >Administrador</a></li>
                 </ul>
             </header>
         </HeaderNav>
@@ -45,12 +45,14 @@ const HeaderNav = styled.div`
             justify-content: space-between;
             align-items: center;
             background: #ff7b00;
+            padding: 0px 8px;
             li{
                 
                 list-style: none;
                 padding: 5px 15px;
                 :hover{
                     background: teal;
+                    border-radius: 5px;
                 }
                 button{
                     background: teal;
