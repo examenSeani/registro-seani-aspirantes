@@ -41,6 +41,9 @@ const ProviderRegistro = ({children}) => {
 
     const registrar = (e) => {
         e.preventDefault();
+      
+        if(alumnos.username !== '' && alumnos.password !== '' && alumnos.carrera !== '' && alumnos.email !== '' && etapaFinal!='')
+        {
       firebase
         .auth()
         .createUserWithEmailAndPassword(alumnos.email, alumnos.password)
@@ -56,11 +59,12 @@ const ProviderRegistro = ({children}) => {
             timeMat: 7300,
             timeLeng: 7300,
             username: alumnos.username,
-            alumnData: { carrera: alumnos.carrera },
+            alumnData: { carrera: alumnos.carrera, email: alumnos.email},
             test: test,
             logico: logico,
             matematico: matematico,
-            lengua: lengua,
+            lengua: lengua
+           
           };
           addAlumn(res.user.uid, data, etapaFinal)
             .then((re) => console.log(re))
@@ -71,6 +75,8 @@ const ProviderRegistro = ({children}) => {
           alert(err);
           console.log(err);
         });
+      }
+      else alert("Verifica los datos, los datos son obligatorios")
     };
 
     const sendVerificationEmail = () => {
