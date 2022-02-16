@@ -22,7 +22,7 @@ const Header = () => {
                 <ul>
                     <li><a href="https://seani-main.vercel.app/" target='_blank' >Prueba SEANI</a></li>
                     <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
-                    <li><a href="https://adminpage-nu.vercel.app/login" target='_blank' >Administrador</a></li>
+                    <li><a href="https://adminpage-psi.vercel.app/login" target='_blank' >Administrador</a></li>
                 </ul>
             </header>
         </HeaderNav>
