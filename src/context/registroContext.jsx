@@ -60,7 +60,7 @@ const ProviderRegistro = ({children}) => {
               timeMat: 7300,
               timeLeng: 7300,
               username: alumnos.username,
-              alumnData: { carrera: alumnos.carrera },
+              alumnData: { carrera: alumnos.carrera, email: alumnos.email},  
               test: test,
               logico: logico,
               matematico: matematico,
