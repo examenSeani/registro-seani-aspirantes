@@ -1,6 +1,13 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import {ContextAdmin} from '../context/AdminContextRegister';
+
+import { useModal } from 'react-hooks-use-modal';
+
+import { AppDialogUpload, AppUpload } from './AppDialogUpload';
+import FileUpdate from './FileUpdate';
+
+
 
 const Header = () => {
 
@@ -10,8 +17,15 @@ const Header = () => {
         changeRegistroAdmin(!registroAdmin);
     }
 
+    const [Modal, open, close, isOpen] = useModal('root', {
+        preventScroll: true,
+        closeOnOverlayClick: false
+      });
+
+
     return (  
         <HeaderNav>
+            
             <header>
                 {
                     registroAdmin === true ?
@@ -20,8 +34,30 @@ const Header = () => {
                         <h2>Registro de aspirantes</h2>
                 }
                 <ul>
-                    <li><a href="">Preba SEANI</a></li>
-                    <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
+                    <li><a href="">SEANI</a></li>
+
+                    <ul>
+                        <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
+                     
+                        <li>
+
+                  
+                 
+                  <AppDialogUpload>
+                        <FileUpdate></FileUpdate>
+                 
+                  </AppDialogUpload>
+
+                  
+     
+   
+
+                        </li>
+
+                        
+                    </ul>
+
+
                     <li><a href="">Administrador</a></li>
                 </ul>
             </header>

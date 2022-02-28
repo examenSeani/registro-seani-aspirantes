@@ -1,0 +1,11 @@
+
+  .modal-main {
+    position:fixed;
+    background: #b9a898;
+    width: 30%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  

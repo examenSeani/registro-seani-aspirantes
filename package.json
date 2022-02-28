@@ -6,13 +6,18 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.25.0",
     "firebase": "^8.4.3",
     "react": "^17.0.2",
+    "react-csv-reader": "^3.4.0",
     "react-dom": "^17.0.2",
+    "react-hooks-use-modal": "^2.1.0",
+    "react-papaparse": "^4.0.2",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
     "styled-components": "^5.2.3",
+    "typescript": "^4.5.5",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

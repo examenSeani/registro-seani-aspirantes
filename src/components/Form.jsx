@@ -136,7 +136,7 @@ const Etapas = styled.div`
   }
 `;
 
-const Boton = styled.button`
+export const Boton = styled.button`
     width: 100%;
     background: teal;
     border: none;
