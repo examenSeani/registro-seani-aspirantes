@@ -1,6 +1,10 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import {ContextAdmin} from '../context/AdminContextRegister';
+
+import { useModal } from 'react-hooks-use-modal';
+import { AppDialogUpload, AppUpload } from './AppDialogUpload';
+import FileUpdate from './FileUpdate';
 
 const Header = () => {
 
@@ -21,7 +25,17 @@ const Header = () => {
                 }
                 <ul>
                     <li><a href="https://seani-main.vercel.app/" target='_blank' >Prueba SEANI</a></li>
-                    <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
+        
+                    <ul>
+        
+                        <li><button onClick={()=>activeAdminForm()}>Administradores / Aspirantes</button></li>
+        
+                        <li>
+                            <AppDialogUpload> <FileUpdate></FileUpdate></AppDialogUpload>
+                        </li>
+                    </ul> 
+    
+                      
                     <li><a href="https://adminpage-psi.vercel.app/login" target='_blank' >Administrador</a></li>
                 </ul>
             </header>
